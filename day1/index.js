@@ -1,3 +1,4 @@
+//code to calculate largest and smallest value in an array
 const array = [11,3,7,8,90,2,33];
 let i,smallest,largest;
 largest=smallest=array[0];
