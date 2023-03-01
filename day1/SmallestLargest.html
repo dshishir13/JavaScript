@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallest and Largest</title>
+</head>
+<body>
+    <p id="largest"></p>
+    <p id="smallest"></p>
+    
+</body>
+<script>//code to calculate largest and smallest value in an array with function
+    const arr = [11,3,7,8,90,2,33];
+    
+    function smallLarge(arr){
+        let i,smallest,largest;
+        largest=smallest=arr[0];
+        for(i=0;i<=arr.length;i++){
+        if(arr[i]>largest)
+        largest=arr[i];
+        if(arr[i]<smallest)
+        smallest=arr[i];
+        }
+       
+        return {
+            large:largest,
+            small:smallest
+        }
+    }
+    const result = smallLarge(arr);
+    let largest = result.large;
+    let smallest = result.small;
+    console.log(largest,smallest);
+    document.getElementById("largest").innerHTML = largest.toString();
+    document.getElementById("smallest").innerHTML = smallest.toString();
+
+    </script>
+</html>
